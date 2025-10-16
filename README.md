@@ -49,8 +49,8 @@
 |------|------|
 | **Deepak.B.T** | 🧑‍💻 Team Leader, Full-Stack Developer |
 | **Harshavardhan.G** | 👥 Quality Analyst, Front-End Developer|
-| **Praveen.K** | 👥 UI/UX Designer|
 | **Suraj.K** | 👥 Front-End Developer|
+| **Praveen.K** | 👥 UI/UX Designer|
 
 ---
 
