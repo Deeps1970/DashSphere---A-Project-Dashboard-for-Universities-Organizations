@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Register | Project Dashboard | Smart Campus Initiative</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+  </head>
+  <body class="bg-gray-900 min-h-screen flex items-center justify-center">
+    <div class="w-full min-h-screen flex items-center justify-center px-4 py-8">
+      <div
+        class="w-full max-w-md mx-auto bg-gray-800 p-8 rounded-2xl shadow-2xl"
+      >
+        <h2 class="text-3xl font-bold text-white mb-6 text-center">Register</h2>
+        <form action="./register.php" method="POST" class="space-y-5">
+          <div>
+            <label for="studentName" class="block text-gray-300 mb-2"
+              >Name of the Student</label
+            >
+            <input
+              type="text"
+              id="studentName"
+              name="name"
+              placeholder="Leo Das"
+              required
+              class="w-full px-4 py-2 rounded-md bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+          <div>
+            <label for="email" class="block text-gray-300 mb-2"
+              >Email Address</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="leodas@srmist.edu.in"
+              required
+              class="w-full px-4 py-2 rounded-md bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+          <div>
+            <label for="password" class="block text-gray-300 mb-2"
+              >Password</label
+            >
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              required
+              class="w-full px-4 py-2 rounded-md bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+          <div>
+            <label for="confirm-password" class="block text-gray-300 mb-2"
+              >Confirm Password</label
+            >
+            <input
+              type="password"
+              id="confirm-password"
+              name="conregpass"
+              placeholder="Confirm your password"
+              required
+              class="w-full px-4 py-2 rounded-md bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md transition duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            Register
+          </button>
+        </form>
+        <p class="text-gray-400 text-center mt-4">
+          Already have an account?
+          <a href="./index.html" class="text-blue-400 hover:underline"
+            >Login here</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <!-- Popup notification function and logic -->
+    <script>
+      function showPopup(message, type) {
+        const alertBox = document.createElement("div");
+        alertBox.innerText = message;
+        alertBox.className = `fixed top-5 right-5 px-4 py-3 rounded-lg shadow-lg text-white text-sm z-50 ${
+          type === "success" ? "bg-green-500" : "bg-red-500"
+        }`;
+        document.body.appendChild(alertBox);
+        setTimeout(() => {
+          alertBox.remove();
+        }, 2000);
+      }
+      // Check URL for status query parameter and show messages accordingly
+      const params = new URLSearchParams(window.location.search);
+      if (params.has("status")) {
+        const status = params.get("status");
+        switch (status) {
+          case "registered":
+            showPopup("✅ Registration successful! Please login.", "success");
+            break;
+          case "password_mismatch":
+            showPopup("❌ Passwords do not match!", "error");
+            break;
+          case "email_exists":
+            showPopup("❌ Email already exists!", "error");
+            break;
+          case "error":
+            showPopup("⚠️ Something went wrong. Try again.", "error");
+            break;
+        }
+        window.history.replaceState(
+          {},
+          document.title,
+          window.location.pathname
+        );
+      }
+      function showPopup(message, type) {
+        const alertBox = document.createElement("div");
+        alertBox.innerText = message;
+        alertBox.className = `fixed top-5 right-5 px-4 py-3 rounded-lg shadow-lg text-white text-sm z-50 ${
+          type === "success" ? "bg-green-500" : "bg-red-500"
+        }`;
+        document.body.appendChild(alertBox);
+        setTimeout(() => {
+          alertBox.remove();
+        }, 2000);
+      }
+      // --- Handle popup for login (success/error) ---
+      const params = new URLSearchParams(window.location.search);
+      if (params.has("status") && params.has("msg")) {
+        const status = params.get("status");
+        const msg = decodeURIComponent(params.get("msg"));
+        if (status === "success") showPopup("✅ " + msg, "success");
+        else showPopup("❌ " + msg, "error");
+        window.history.replaceState(
+          {},
+          document.title,
+          window.location.pathname
+        );
+      }
+    </script>
+  </body>
+</html>

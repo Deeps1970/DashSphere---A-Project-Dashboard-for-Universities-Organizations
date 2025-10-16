@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Project Dashboard | Smart Campus Initiative</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+  </head>
+  <body class="bg-gray-900 min-h-screen flex flex-col">
+    <!-- Login Section (Centered) -->
+    <div class="flex flex-1 items-center justify-center px-4 py-12">
+      <div
+        class="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12"
+      >
+        <div class="flex-1 text-center md:text-left pb-8 lg:pb-0">
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+            Project Dashboard
+          </h1>
+          <p class="text-gray-400 text-lg mb-8">
+            Smart Campus Initiative Project
+          </p>
+          <div class="w-full max-w-md mx-auto md:mx-0">
+            <img
+              src="./src/smartcampus.jpg"
+              alt="Smart Campus Logo"
+              class="rounded-xl shadow-xl w-full"
+            />
+          </div>
+        </div>
+
+        <div
+          class="flex-1 max-w-md w-full bg-gray-800 p-8 rounded-2xl shadow-2xl"
+        >
+          <h2 class="text-3xl font-bold text-white mb-6 text-center">Login</h2>
+          <form action="./login.php" method="POST" class="space-y-5">
+            <div>
+              <label for="email" class="block text-gray-300 mb-2">Email</label>
+              <input
+                type="email"
+                id="email1"
+                name="email"
+                placeholder="leodas@srmist.edu.in"
+                required
+                class="w-full px-4 py-2 rounded-md bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <div>
+              <label for="password" class="block text-gray-300 mb-2"
+                >Password</label
+              >
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                class="w-full px-4 py-2 rounded-md bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <div class="flex items-center justify-between mt-4">
+              <div class="flex items-center">
+                <input
+                  type="checkbox"
+                  id="remember"
+                  name="remember"
+                  class="mr-2 text-blue-600 focus:ring-blue-500 rounded"
+                />
+                <label for="remember" class="text-gray-300">Remember me</label>
+              </div>
+              <a href="./forgotpass.html" class="text-blue-400 hover:underline"
+                >Forgot password?</a
+              >
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md transition duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              Login
+            </button>
+          </form>
+          <p class="text-gray-400 text-center mt-4">
+            Don't have an account?
+            <a href="./register.html" class="text-blue-400 hover:underline"
+              >Register here</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Meet Our Team Section (Responsive) -->
+    <section class="bg-gray-900 py-12 px-4">
+      <h2 class="text-3xl font-bold text-center text-white mb-10">
+        Meet Our Team
+      </h2>
+      <div
+        class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-6xl mx-auto"
+      >
+        <!-- Deepak B T -->
+        <div
+          class="bg-gray-800 rounded-2xl shadow-lg p-6 text-center border border-gray-700"
+        >
+          <img
+            src="./src/deepak.jpg"
+            alt="Team Member 1"
+            class="w-28 h-28 mx-auto rounded-full border-4 border-gray-600 object-cover"
+          />
+          <h3 class="mt-4 text-xl font-bold text-white">Deepak B T</h3>
+          <p class="text-gray-400 text-sm">Dashboard Lead & Data Wrangler</p>
+          <p class="mt-2 text-gray-300 text-sm">
+            Led the development of the Project, handled backend systems and
+            database management, implemented secure login authentication,
+            debugged and optimized data workflows.
+          </p>
+          <div class="flex justify-center gap-4 mt-4">
+            <a
+              href="https://linkedin.com/in/deepak1970"
+              target="_blank"
+              class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-full"
+            >
+              <!-- LinkedIn SVG -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-linkedin"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.instagram.com/_.cltchr7._/"
+              target="_blank"
+              class="bg-pink-700 hover:bg-pink-600 text-white px-3 py-2 rounded-full"
+            >
+              <!-- Instagram SVG -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-instagram"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- Repeat for Suraj K, Harsha G, Praveen K with respective info/images and social links, see your old code for those -->
+
+        <!-- Suraj K -->
+        <div
+          class="bg-gray-800 rounded-2xl shadow-lg p-6 text-center border border-gray-700"
+        >
+          <img
+            src="./src/suraj.jpg"
+            alt="Team Member 2"
+            class="w-28 h-28 mx-auto rounded-full border-4 border-gray-600 object-cover"
+          />
+          <h3 class="mt-4 text-xl font-bold text-white">Suraj K</h3>
+          <p class="text-gray-400 text-sm">Front-End Developer</p>
+          <p class="mt-2 text-gray-300 text-sm">
+            Designed sleek UI with Tailwind, animations, and user-friendly
+            interactions.
+          </p>
+          <div class="flex justify-center gap-4 mt-4">
+            <a
+              href="https://linkedin.com/in/suraj-k-a0563835b"
+              target="_blank"
+              class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-full"
+            >
+              <!-- LinkedIn SVG ... -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-linkedin"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.instagram.com/surajj.krishnan/"
+              target="_blank"
+              class="bg-pink-700 hover:bg-pink-600 text-white px-3 py-2 rounded-full"
+            >
+              <!-- Instagram SVG ... -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-instagram"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- Harsha G -->
+        <div
+          class="bg-gray-800 rounded-2xl shadow-lg p-6 text-center border border-gray-700"
+        >
+          <img
+            src="../src/harsha.jpg"
+            alt="Team Member 3"
+            class="w-28 h-28 mx-auto rounded-full border-4 border-gray-600 object-cover"
+          />
+          <h3 class="mt-4 text-xl font-bold text-white">Harshavardhan G</h3>
+          <p class="text-gray-400 text-sm">Quality Analyst</p>
+          <p class="mt-2 text-gray-300 text-sm">
+            Ensured the reliability of the system by testing features,
+            identifying bugs, and validating functionality to deliver a smooth
+            and error-free user experience
+          </p>
+          <div class="flex justify-center gap-4 mt-4">
+            <a
+              href="https://linkedin.com/in/harshavardhan-g-ab1015318"
+              target="_blank"
+              class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-full"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-linkedin"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.instagram.com/harsha07_25/"
+              target="_blank"
+              class="bg-pink-700 hover:bg-pink-600 text-white px-3 py-2 rounded-full"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-instagram"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- Praveen K -->
+        <div
+          class="bg-gray-800 rounded-2xl shadow-lg p-6 text-center border border-gray-700"
+        >
+          <img
+            src="../src/praveen.jpg"
+            alt="Team Member 3"
+            class="w-28 h-28 mx-auto rounded-full border-4 border-gray-600 object-cover"
+          />
+          <h3 class="mt-4 text-xl font-bold text-white">Praveen K</h3>
+          <p class="text-gray-400 text-sm">UI/UX Designer</p>
+          <p class="mt-2 text-gray-300 text-sm">
+            Designed an intuitive and visually appealing user interface,
+            focusing on accessibility and user-friendly navigation to enhance
+            the overall experience of the dashboard.
+          </p>
+          <div class="flex justify-center gap-4 mt-4">
+            <a
+              href="#"
+              target="_blank"
+              class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-full"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-linkedin"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.instagram.com/praveen_5.507/"
+              target="_blank"
+              class="bg-pink-700 hover:bg-pink-600 text-white px-3 py-2 rounded-full"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-instagram"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function showPopup(message, type) {
+        const alertBox = document.createElement("div");
+        alertBox.innerText = message;
+        alertBox.className = `fixed top-5 right-5 px-4 py-3 rounded-lg shadow-lg text-white text-sm z-50 ${type === "success" ? "bg-green-500" : "bg-red-500"}`;
+        document.body.appendChild(alertBox);
+        setTimeout(() => { alertBox.remove(); }, 2000);
+      }
+
+      // Check URL for status and msg query parameters
+      const params = new URLSearchParams(window.location.search);
+
+      // Handle registration status with only status parameter
+      if (params.has("status") && !params.has("msg")) {
+        const status = params.get("status");
+        switch (status) {
+          case "registered":
+            showPopup("✅ Registration successful! Please login.", "success");
+            break;
+          case "password_mismatch":
+            showPopup("❌ Passwords do not match!", "error");
+            break;
+          case "email_exists":
+            showPopup("❌ Email already exists!", "error");
+            break;
+          case "error":
+            showPopup("⚠️ Something went wrong. Try again.", "error");
+            break;
+        }
+      }
+
+      // Handle login status with both status and msg parameters
+      if (params.has("status") && params.has("msg")) {
+        const status = params.get("status");
+        const msg = decodeURIComponent(params.get("msg"));
+        if (status === "success") {
+          showPopup("✅ " + msg, "success");
+        } else {
+          showPopup("❌ " + msg, "error");
+        }
+      }
+
+      // Clean URL to remove query parameters for better user experience
+      if (params.has("status")) {
+        window.history.replaceState({}, document.title, window.location.pathname);
+      }
+
+      if (params.has("status")) {
+        const status = params.get("status");
+          switch (status) {
+              case "logout":
+                  showPopup("🚪 Logout successful. See you again!", "success");
+                  break;
+              // other cases...
+            }
+      }
+
+    </script>
+
+  </body>
+</html>
