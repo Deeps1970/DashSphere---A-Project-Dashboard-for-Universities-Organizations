@@ -47,8 +47,8 @@
 
 | Name | Role |
 |------|------|
-| **Deepak.B.T** | 🧑‍💻 Team Leader, Data-Wrangler, Full-Stack Developer |
-| **Harshavardhan.G** | 👥 Quality Analyst, Front-End Developer|
+| **Deepak.B.T** | 🧑‍💻 Team Lead, Full-Stack Developer |
+| **Harshavardhan.G** | 👥 Quality Analyst, Tester|
 | **Suraj.K** | 👥 Front-End Developer|
 | **Praveen.K** | 👥 UI/UX Designer|
 
