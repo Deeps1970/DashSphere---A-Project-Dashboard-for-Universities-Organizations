@@ -3,7 +3,7 @@
 > A comprehensive **web-based project dashboard** designed to streamline academic project management for students and faculty.  
 > Empowering collaboration, evaluation, and innovation — all in one place!
 
-🎯 **Live Demo:** [🔗 Visit DashSphere][(https://dashsphere.infinityfreeapp.com/)]
+🎯 **Live Demo:** [🔗 Visit DashSphere](https://dashsphere.infinityfreeapp.com/)
 
 ---
 
